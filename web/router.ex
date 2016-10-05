@@ -16,7 +16,8 @@ defmodule Pxblog.Router do
   scope "/", Pxblog do
     pipe_through :browser
 
-    # get "/", PageController, :index
+    get "/", PageController, :index
     resources "/posts", PostController
+    resources "/users", UserController
   end
 end
